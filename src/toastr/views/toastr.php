@@ -1,9 +1,6 @@
 <?php
 
-use common\widgets\toastr\assets\ToastrAsset;
 use yii\helpers\Json;
-
-ToastrAsset::register($this);
 
 /* @var $this yii\web\View */
 /* @var $message string */

@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a7e1ed8ec711dcac4288f5dde58c417",
+    "content-hash": "81cd5c7d684d293d62c60291ae1ef891",
     "packages": [
+        {
+            "name": "atmaliance/yii2-atm-asset",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devatmaliance/yii2-atm-asset.git",
+                "reference": "69f2612e917c7b969237a92eb5e2940440afbf0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devatmaliance/yii2-atm-asset/zipball/69f2612e917c7b969237a92eb5e2940440afbf0d",
+                "reference": "69f2612e917c7b969237a92eb5e2940440afbf0d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "yiisoft/yii2": "2.*",
+                "yiisoft/yii2-bootstrap": "~2.0.0"
+            },
+            "suggest": {
+                "cebe/yii2-gravatar": "Display user icons",
+                "rmrevin/yii2-fontawesome": "Font icons"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "atmaliance\\yii2_atm_asset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vitaliy Popov",
+                    "email": "popov.v.o@atm72.ru"
+                }
+            ],
+            "description": "ATM Asset backend theme asset bundle for Yii 2.0 Framework based on dmstr/adminlte",
+            "keywords": [
+                "asset",
+                "atm72",
+                "extension",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/devatmaliance/yii2-atm-asset/issues",
+                "source": "https://github.com/devatmaliance/yii2-atm-asset/tree/master"
+            },
+            "time": "2022-02-07T16:33:06+00:00"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.4.1",
@@ -563,7 +616,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "atmaliance/yii2-atm-asset": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
