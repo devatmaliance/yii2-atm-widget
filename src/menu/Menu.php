@@ -6,12 +6,12 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use yii\widgets\Menu;
+use yii\widgets\Menu as BaseMenu;
 
 /**
  * @author dmstr/yii2-adminlte-asset
  */
-class MenuWidget extends Menu
+class Menu extends BaseMenu
 {
     public static $iconClassPrefix = 'fa fa-';
     public $linkTemplate = '<a href="{url}">{icon} {label}</a>';

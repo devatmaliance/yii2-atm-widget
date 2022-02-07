@@ -4,7 +4,7 @@ namespace atmaliance\yii2_atm_widget\toastr;
 
 use yii\base\Widget;
 
-final class ToastrWidget extends Widget
+final class Toastr extends Widget
 {
     public ?string $message = null;
     public ?string $type = null;

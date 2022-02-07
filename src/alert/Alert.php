@@ -2,11 +2,11 @@
 
 namespace atmaliance\yii2_atm_widget\alert;
 
-use atmaliance\yii2_atm_widget\toastr\ToastrWidget;
+use atmaliance\yii2_atm_widget\toastr\Toastr;
 use yii\bootstrap\Alert as BootstrapAlert;
 use yii\bootstrap\Widget;
 
-class AlertWidget extends Widget
+class Alert extends Widget
 {
     public array $alertTypes = [
         'error' => [
@@ -66,13 +66,13 @@ class AlertWidget extends Widget
 
                 case 'toastr':
                     if (count($flashInfo) === 2) {
-                        echo ToastrWidget::widget([
+                        echo Toastr::widget([
                             'message' => $flashInfo['message'] ?? null,
                             'type' => $flashInfo['type'] ?? null,
                         ]);
                     } else {
                         array_map(static function($flashInfoItem) {
-                            echo ToastrWidget::widget([
+                            echo Toastr::widget([
                                 'message' => $flashInfoItem['message'] ?? null,
                                 'type' => $flashInfoItem['type'] ?? null,
                             ]);
