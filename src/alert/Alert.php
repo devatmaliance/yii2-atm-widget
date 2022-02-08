@@ -8,24 +8,31 @@ use yii\bootstrap\Widget;
 
 class Alert extends Widget
 {
+    private const ERROR_ALERT_TYPE = 'error';
+    private const DANGER_ALERT_TYPE = 'danger';
+    private const SUCCESS_ALERT_TYPE = 'success';
+    private const WARNING_ALERT_TYPE = 'warning';
+    private const INFO_ALERT_TYPE = 'info';
+    private const TOASTR_ALERT_TYPE = 'toastr';
+
     public array $alertTypes = [
-        'error' => [
+        self::ERROR_ALERT_TYPE => [
             'class' => 'alert-danger',
             'icon' => '<i class="icon fa fa-ban"></i>',
         ],
-        'danger' => [
+        self::DANGER_ALERT_TYPE => [
             'class' => 'alert-danger',
             'icon' => '<i class="icon fa fa-ban"></i>',
         ],
-        'success' => [
+        self::SUCCESS_ALERT_TYPE => [
             'class' => 'alert-success',
             'icon' => '<i class="icon fa fa-check"></i>',
         ],
-        'info' => [
+        self::INFO_ALERT_TYPE => [
             'class' => 'alert-info',
             'icon' => '<i class="icon fa fa-info"></i>',
         ],
-        'warning' => [
+        self::WARNING_ALERT_TYPE => [
             'class' => 'alert-warning',
             'icon' => '<i class="icon fa fa-warning"></i>',
         ],
@@ -42,11 +49,11 @@ class Alert extends Widget
 
         foreach ($flashes as $type => $flashInfo) {
             switch ($type) {
-                case 'error':
-                case 'danger':
-                case 'success':
-                case 'info':
-                case 'warning':
+                case self::ERROR_ALERT_TYPE:
+                case self::DANGER_ALERT_TYPE:
+                case self::SUCCESS_ALERT_TYPE:
+                case self::INFO_ALERT_TYPE:
+                case self::WARNING_ALERT_TYPE:
                     foreach ((array)$flashInfo as $message) {
                         $this->options['class'] = $this->alertTypes[$type]['class'] . $appendCss;
                         $this->options['id'] = $this->getId() . '-' . $type;
@@ -64,8 +71,8 @@ class Alert extends Widget
 
                     break;
 
-                case 'toastr':
-                    if (count($flashInfo) === 2) {
+                case self::TOASTR_ALERT_TYPE:
+                    if (count((array)$flashInfo) === 2) {
                         echo Toastr::widget([
                             'message' => $flashInfo['message'] ?? null,
                             'type' => $flashInfo['type'] ?? null,
