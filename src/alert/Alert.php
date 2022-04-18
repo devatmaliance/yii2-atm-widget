@@ -72,19 +72,12 @@ class Alert extends Widget
                     break;
 
                 case self::TOASTR_ALERT_TYPE:
-                    if (count((array)$flashInfo) === 2) {
+                    array_map(static function($flashInfoItem) {
                         echo Toastr::widget([
-                            'message' => $flashInfo['message'] ?? null,
-                            'type' => $flashInfo['type'] ?? null,
+                            'message' => $flashInfoItem['message'] ?? null,
+                            'type' => $flashInfoItem['type'] ?? null,
                         ]);
-                    } else {
-                        array_map(static function($flashInfoItem) {
-                            echo Toastr::widget([
-                                'message' => $flashInfoItem['message'] ?? null,
-                                'type' => $flashInfoItem['type'] ?? null,
-                            ]);
-                        }, (array)$flashInfo);
-                    }
+                    }, (array)$flashInfo);
 
                     $session->removeFlash($type);
                     break;
