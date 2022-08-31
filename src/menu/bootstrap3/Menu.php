@@ -1,6 +1,6 @@
 <?php
 
-namespace atmaliance\yii2_atm_widget\menu;
+namespace atmaliance\yii2_atm_widget\menu\bootstrap3;
 
 use Yii;
 use yii\helpers\ArrayHelper;

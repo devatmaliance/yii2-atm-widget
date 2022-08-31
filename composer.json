@@ -14,6 +14,7 @@
         "php": ">=7.4",
         "yiisoft/yii2": "2.*",
         "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-bootstrap4": "~2.0.8",
         "atmaliance/yii2-atm-asset": "dev-master"
     },
     "suggest": {

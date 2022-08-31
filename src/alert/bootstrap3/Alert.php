@@ -1,6 +1,6 @@
 <?php
 
-namespace atmaliance\yii2_atm_widget\alert;
+namespace atmaliance\yii2_atm_widget\alert\bootstrap3;
 
 use atmaliance\yii2_atm_widget\toastr\Toastr;
 use yii\bootstrap\Alert as BootstrapAlert;
